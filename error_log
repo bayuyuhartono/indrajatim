@@ -1,0 +1,4 @@
+[10-Jul-2021 15:59:51 Asia/Jakarta] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/indr6397/public_html/application/views/template/header.php on line 30
+[03-Aug-2021 22:15:20 Asia/Jakarta] PHP Fatal error:  Only variables can be passed by reference in /home/indr6397/public_html/application/views/detail_berita.php on line 147
+[03-Aug-2021 22:28:11 Asia/Jakarta] PHP Fatal error:  Only variables can be passed by reference in /home/indr6397/public_html/application/views/detail_berita.php on line 147
+[03-Aug-2021 22:28:46 Asia/Jakarta] PHP Fatal error:  Only variables can be passed by reference in /home/indr6397/public_html/application/views/detail_berita.php on line 147
