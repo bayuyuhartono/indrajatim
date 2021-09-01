@@ -90,4 +90,10 @@ class M_admin extends CI_Model
 	{
 		return $this->db->query("select * from tbl_komentar left join tbl_berita ON tbl_komentar.berita_id=tbl_berita.id_berita $where;")->result_array();
 	}
+
+	public function getberitaslug($where = '')
+	{
+		return $this->db->query("select id_berita, judul from tbl_berita left join tbl_kategori ON tbl_berita.id_kategori=tbl_kategori.id	
+		 $where;")->result_array();
+	}
 }		

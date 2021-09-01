@@ -39,7 +39,7 @@ class Catatanakhirpekan extends CI_Controller
 		$this->load->view('catatanakhirpekan', $data);
 	}
 
-	public function detail($id)
+	public function detail($slug)
 	{
 		$contact = $this->admin->getcontact("where id='1' ");
 		$socmed = $this->admin->getsocmed("where id='1' ");
@@ -47,7 +47,8 @@ class Catatanakhirpekan extends CI_Controller
 		$socmed_tiga = $this->admin->getsocmed("where id='3' ");
 		$socmed_empat = $this->admin->getsocmed("where id='4' ");
 		$socmed_lima = $this->admin->getsocmed("where id='5' ");
-		$detail = $this->admin->getberita("where id_berita='$id' ");
+		$detail = $this->admin->getberita("where slug='$slug' ");
+		$id = $detail[0]['id'];
 		$countkomentar = $this->admin->countkomentar("where berita_id='$id' ");
 		$data = array(
 			'title' => 'INDRA JATIM',

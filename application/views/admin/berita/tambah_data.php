@@ -15,9 +15,15 @@
 									<div class="col-md-6">                    
 										<div class="form-group">                      
 											<label>Judul</label>                      
-											<input type="text" name="judul" class="form-control" required>                    
+											<input type="text" name="judul" class="form-control judul" required>                    
 										</div>                                      
-									</div>                    
+									</div>    
+                  <div class="col-md-6">                    
+										<div class="form-group">                      
+											<label>Slug</label>                      
+											<input type="text" name="slug" class="form-control slug" required>                    
+										</div>                                      
+									</div>                 
 									<div class="col-md-6">                    
 										<div class="form-group">                      
 											<label>Gambar</label>                      
@@ -135,4 +141,19 @@
         extraAllowedContent: mathElements.join(' ') + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)'
       });
   });
+
+  var slug = function(str) {
+    var $slug = '';
+    var trimmed = $.trim(str);
+    $slug = trimmed.replace(/[^a-z0-9-]/gi, '-').
+    replace(/-+/g, '-').
+    replace(/^-|-$/g, '');
+    return $slug.toLowerCase();
+  }
+
+  $('.judul').keyup(function() {
+    var takedata = $('.judul').val()
+    $('.slug').val(slug(takedata));
+  });
+
 </script>

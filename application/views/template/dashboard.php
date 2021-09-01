@@ -18,15 +18,15 @@
 						<div class="post-item border">                            
 							<div class="post-item-wrap">                                
 								<div class="post-image">                                    
-									<a href="<?= base_url('berita/detail/'.$data['id_berita']);?>">                                        
+									<a href="<?= base_url('berita/detail/'.$data['slug']);?>">                                        
 										<img alt="img-home" src="<?= base_url('assets/admin/upload/berita/'.$data['gambar']);?>">
 									</a>                                
 								</div>                                
 								<div class="post-item-description">   
 									<span class="post-meta-date"><i class="fa fa-calendar"></i><?= date('d-m-Y', strtotime($data['tanggal']));?></span>    
 									<span class="post-meta-comments"><i class="fa fa-user"></i>By Admin</span>                                               
-									<h2 style="font-size:13px;"><a href="<?= base_url('berita/detail/'.$data['id_berita']);?>"><?= $data['judul'];?></a></h2>
-									<a href="<?= base_url('berita/detail/'.$data['id_berita']);?>" class="item-link">Read More <i class="icon-chevron-right"></i></a>
+									<h2 style="font-size:13px;"><a href="<?= base_url('berita/detail/'.$data['slug']);?>"><?= $data['judul'];?></a></h2>
+									<a href="<?= base_url('berita/detail/'.$data['slug']);?>" class="item-link">Read More <i class="icon-chevron-right"></i></a>
 								</div>                            
 							</div>                            
 						</div>                    
@@ -48,7 +48,7 @@
 										<div class="post-thumbnail-entry">
 											<img alt="" src="<?= base_url('assets/admin/upload/berita/'.$data['gambar']);?>">
 											<div class="post-thumbnail-content">
-												<a href="<?= base_url('berita/detail/'.$data['id_berita']);?>"><?= $data['judul'];?></a>
+												<a href="<?= base_url('berita/detail/'.$data['slug']);?>"><?= $data['judul'];?></a>
 												<span class="post-date"><i class="icon-clock"></i> <?= date('d-m-Y', strtotime($data['tanggal']));?></span>
 												<span class="post-category"><i class="fa fa-tag"></i> <?= $data['kategori'];?></span>
 											</div>
@@ -83,15 +83,15 @@
 				<div class="post-item border">                
 					<div class="post-item-wrap">                    
 						<div class="post-image">                        
-							<a href="<?= base_url('berita/detail/'.$data['id_berita']);?>">                            
-								<img alt="<?= base_url('berita/detail/'.$data['id_berita']);?>" src="<?= base_url('assets/admin/upload/berita/'.$data['gambar']);?>" height="200">
+							<a href="<?= base_url('berita/detail/'.$data['slug']);?>">                            
+								<img alt="<?= base_url('berita/detail/'.$data['slug']);?>" src="<?= base_url('assets/admin/upload/berita/'.$data['gambar']);?>" height="200">
 							</a>                    
 						</div>                    
 						<div class="post-item-description">               
 							<span class="post-meta-date"><i class="fa fa-calendar"></i><?= date('d-m-Y', strtotime($data['tanggal']));?></span>                        
 							<span class="post-meta-comments"><i class="fa fa-user"></i>By Admin</span>                     
-							<h2 style="font-size:20px;"><a href="<?= base_url('berita/detail/'.$data['id_berita']);?>"><?= $data['judul'];?></a></h2>                     
-							<a href="<?= base_url('berita/detail/'.$data['id_berita']);?>" class="item-link">Read More <i class="icon-chevron-right"></i></a>              
+							<h2 style="font-size:20px;"><a href="<?= base_url('berita/detail/'.$data['slug']);?>"><?= $data['judul'];?></a></h2>                     
+							<a href="<?= base_url('berita/detail/'.$data['slug']);?>" class="item-link">Read More <i class="icon-chevron-right"></i></a>              
 						</div>                
 					</div>            
 				</div>

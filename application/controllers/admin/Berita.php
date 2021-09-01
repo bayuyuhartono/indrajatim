@@ -57,6 +57,7 @@ class Berita extends CI_Controller
 			$this->image_lib->resize();
 			$data = array(
 				'judul'  			=> $this->input->post('judul'),
+				'slug'  			=> $this->input->post('slug'),
 				'id_kategori'  		=> $this->input->post('kategori'),
 				'tanggal'   		=> date($this->input->post('tanggal')).' '.$jam, 
 				'tanggal_dibuat'   	=> date('Y-m-d H:i:s').' '.$jam, 
@@ -77,6 +78,7 @@ class Berita extends CI_Controller
 			'subtitle' => 'Edit Berita',
 			'id_berita' => (isset($berita[0]['id_berita'])) ? $berita[0]['id_berita'] : "",
 			'judul' => (isset($berita[0]['judul'])) ? $berita[0]['judul'] : "",
+			'slug' => (isset($berita[0]['slug'])) ? $berita[0]['slug'] : "",
 			'kategori' => (isset($berita[0]['kategori'])) ? $berita[0]['kategori'] : "",
 			'tanggal' => (isset($berita[0]['tanggal'])) ? $berita[0]['tanggal'] : "",
 			'tanggal_diubah' => date('Y-m-d H:i:s'),
@@ -110,6 +112,7 @@ class Berita extends CI_Controller
 			$id_berita = $this->input->post('id_berita');
 			$data = array(
 				'judul'  			=> $this->input->post('judul'),
+				'slug'  			=> $this->input->post('slug'),
 				'id_kategori'  		=> $this->input->post('kategori'),
 				'content'  	 		=> $this->input->post('content'),
 				'caption'  	 		=> $this->input->post('caption'),
@@ -128,6 +131,7 @@ class Berita extends CI_Controller
 			$id_berita = $this->input->post('id_berita');
 			$data = array(
 				'judul'  		=> $this->input->post('judul'),
+				'slug'  		=> $this->input->post('slug'),
 				'id_kategori'  		=> $this->input->post('kategori'),
 				'content'  	 		=> $this->input->post('content'),
 				'caption'  	 		=> $this->input->post('caption'),

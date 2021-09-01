@@ -19,6 +19,12 @@
                       <input type="text" name="judul" class="form-control" value="<?= $judul;?>">
                     </div>
                   </div>  
+                  <div class="col-md-6">                    
+										<div class="form-group">                      
+											<label>Slug</label>                      
+											<input type="text" name="slug" class="form-control slug" value="<?= $slug;?>">                  
+										</div>                                      
+									</div> 
                   <div class="col-md-6">
                     <div class="form-group">
                       <label>Gambar</label>
