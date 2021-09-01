@@ -96,4 +96,10 @@ class M_admin extends CI_Model
 		return $this->db->query("select id_berita, judul from tbl_berita left join tbl_kategori ON tbl_berita.id_kategori=tbl_kategori.id	
 		 $where;")->result_array();
 	}
+
+	public function getberitamore($where = '')
+	{
+		return $this->db->query("select id_berita, judul, slug, gambar, tanggal from tbl_berita left join tbl_kategori ON tbl_berita.id_kategori=tbl_kategori.id	
+		 $where;")->result_array();
+	}
 }		

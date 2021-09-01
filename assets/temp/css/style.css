@@ -20255,3 +20255,11 @@ body[data-bg-image] {
 .logo-default {
     font-size: 35px !important;
 }
+
+.loadmore-section {
+    text-align: center;
+}
+
+.loading-bar {
+    width: 60px;
+}
