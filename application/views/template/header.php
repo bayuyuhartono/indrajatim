@@ -166,19 +166,21 @@
                 </div>
             </div>
         </header>
-        <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-fade="true">
-            <?php foreach ($list_slide as $data) { ?>
-                <div class="slide" data-bg-image="<?= base_url('assets/admin/upload/slide/'.$data['gambar']);?>">
-                    <div class="bg-overlay"></div>
-                    <div class="container">
-                        <div class="slide-captions text-left text-light">
-                            <h1><?= $data['judul'];?></h1> 
-                            <p class="text-small"><?= $data['sub_judul'];?></p>
+        <?php if (count($list_slide) > 0) { ?>
+            <div id="slider" class="inspiro-slider slider-fullscreen dots-creative" data-fade="true">
+                <?php foreach ($list_slide as $data) { ?>
+                    <div class="slide" data-bg-image="<?= base_url('assets/admin/upload/berita/'.$data['gambar']);?>">
+                        <div class="bg-overlay"></div>
+                        <div class="container">
+                            <div class="slide-captions text-left text-light">
+                                <h1><a href="<?= base_url($kategori_name.'/detail/'.$data['slug']);?>"><?= $data['judul'];?></a></h1> 
+                                <!-- <p class="text-small"><?= $data['sub_judul'];?></p> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php } ?>    
-        </div>
+                <?php } ?>    
+            </div>
+        <?php  } ?>
     </div>   
 
     <script>

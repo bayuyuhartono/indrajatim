@@ -53,6 +53,15 @@
                       <input type="date" name="tanggal" class="form-control" value="<?= date('Y-m-d', strtotime($tanggal)); ?>">
                     </div>
                   </div>
+                  <div class="col-md-4">               
+                    <div class="form-group">                      
+											<label>Atur Sebagai Slide</label>                      
+											<select name="slide" class="form-control select2">                        
+													<option value="0" <?= $slide == "0" ? 'selected = "selected"' : '' ?>>Tidak</option>
+													<option value="1" <?= $slide == "1" ? 'selected = "selected"' : '' ?>>Ya</option>
+											</select>                    
+										</div>
+                  </div> 
                 </div>  
                 <div class="row">
                   <div class="col-md-12">

@@ -34,7 +34,8 @@ class Hiburan extends CI_Controller
 			'img_socmedempat' => (isset($socmed_empat[0]['gambar'])) ? $socmed_empat[0]['gambar'] : "",
 			'img_socmedlima' => (isset($socmed_lima[0]['gambar'])) ? $socmed_lima[0]['gambar'] : "",
 			'list_hiburan' => $this->admin->getberita("where kategori='Hiburan' AND tanggal <= NOW() order by tanggal DESC limit 12 "),
-			'list_slide' => $this->admin->getslide("where kategori='13' "),
+			'list_slide' => $this->admin->getberita("where kategori='Hiburan' AND tanggal <= NOW() AND slide='1' order by tanggal DESC limit 3 "),
+			'kategori_name' => 'hiburan',
 		);
 		$this->load->view('hiburan', $data);
 	}
@@ -77,7 +78,8 @@ class Hiburan extends CI_Controller
 			'list_komentar' => $this->admin->getkomentar("where berita_id='$id' and status='1' "),
 			'nama' => $this->session->userdata('nama'),
 			'emails' => $this->session->userdata('email'),
-			'list_slide' => $this->admin->getslide("where kategori='13' "),
+			'list_slide' => $this->admin->getberita("where kategori='Hiburan' AND tanggal <= NOW() AND slide='1' order by tanggal DESC limit 3 "),
+			'kategori_name' => 'hiburan',
 			'image_banneratas' => $this->admin->getbanner("where posisi='Atas' and status='1' "),
 			'image_bannerkanan' => $this->admin->getbanner("where posisi='Kanan' and status='1' "),
 			'image_bannerbawah' => $this->admin->getbanner("where posisi='Bawah' and status='1' "),

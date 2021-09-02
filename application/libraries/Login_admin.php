@@ -15,13 +15,12 @@ class Login_admin
 	{
 		//query untuk pencocokan data
 		$query = $this->CI->db->get_where('tbl_admin', array(	'username' => $username,
-																'password' => $password,
 		));
 
 		//Jika ada hasilnya
 		if ($query->num_rows() > 0)
 		{
-			$row 			= $this->CI->db->query('SELECT * FROM tbl_admin WHERE username = "'.$username.'" AND password = "'.$password.'" ');
+			$row 			= $this->CI->db->query('SELECT * FROM tbl_admin WHERE username = "'.$username.'" ');
 			$admin 			= $row->row();
 			$id 			= $admin->id;
 			$username 		= $admin->username;

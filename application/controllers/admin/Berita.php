@@ -63,6 +63,7 @@ class Berita extends CI_Controller
 				'tanggal_dibuat'   	=> date('Y-m-d H:i:s').' '.$jam, 
 				'content'   		=> $this->input->post('content'),
 				'caption'   		=> $this->input->post('caption'),
+				'slide'   		=> $this->input->post('slide'),
 				'gambar'   			=> $new_name,
 			);
 			$this->global->InsertData('tbl_berita', $data);
@@ -84,6 +85,7 @@ class Berita extends CI_Controller
 			'tanggal_diubah' => date('Y-m-d H:i:s'),
 			'content' => (isset($berita[0]['content'])) ? $berita[0]['content'] : "",
 			'caption' => (isset($berita[0]['caption'])) ? $berita[0]['caption'] : "",
+			'slide' => (isset($berita[0]['slide'])) ? $berita[0]['slide'] : "0",
 			'list_kategori' => $this->admin->getkategori()
 		);
 		$this->load->view('admin/berita/edit_data', $data);
@@ -116,6 +118,7 @@ class Berita extends CI_Controller
 				'id_kategori'  		=> $this->input->post('kategori'),
 				'content'  	 		=> $this->input->post('content'),
 				'caption'  	 		=> $this->input->post('caption'),
+				'slide'  	 		=> $this->input->post('slide'),
 				'tanggal'   		=> date('Y-m-d', strtotime($this->input->post('tanggal'))).' '.$jam,
 				'tanggal_diubah'   		=> date('Y-m-d H:i:s').' '.$jam,
 			);

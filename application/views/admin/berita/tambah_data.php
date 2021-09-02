@@ -52,6 +52,15 @@
 											<input type="date" name="tanggal" class="form-control" required>                    
 										</div>
                   </div>
+                  <div class="col-md-4">               
+                    <div class="form-group">                      
+											<label>Atur Sebagai Slide</label>                      
+											<select name="slide" class="form-control select2">                        
+													<option value="0">Tidak</option>
+													<option value="1">Ya</option>
+											</select>                    
+										</div>
+                  </div> 
 								</div>                  
 								<div class="row">                  
 									<div class="col-md-12">                    
